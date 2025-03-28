@@ -1,0 +1,36 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p> การส่งค่าตัวเลข 2 ตัว ผ่านฟังก์ชัน</p>
+        <p>7+12=19</p>
+         <hr>
+        <p id="factor"></p>
+
+        <script>
+            function numfac(n)
+            {
+                let d=2
+                let showtext=n+"=";
+                while (n!=1)
+                {
+                    if (n%d==0)
+                    {
+                        showtext=showtext+d+"x";
+                        n=n/d;
+                    }
+                    else
+                    {
+                    d=d+1;
+                    }
+                }
+                showtext=showtext+"1";
+                return showtext;
+            }
+            totaltext=numfac(42)+"<br>"+numfac(85)+"<br>"+numfac(312);
+
+            document.getElementById("factor").innerHTML=totaltext;
+        </script>
+    </body>
+</html>
